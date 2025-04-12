@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme transition */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.MuiPaper-root, .MuiCard-root, .MuiAppBar-root, .MuiDrawer-paper {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Hover effects */
+.hover-effect {
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+.hover-effect:hover {
+  transform: scale(1.05);
+}
+
+/* Loading animation */
+.loading-pulse {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Global styles */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode specific styles */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #4dabf5 !important;
+}
+
+.dark-mode .MuiPaper-root {
+  background-color: #1e1e1e !important;
+}
+
+.dark-mode .MuiTypography-root {
+  color: #4dabf5 !important;
+}
+
+.dark-mode .MuiButton-root {
+  color: #4dabf5 !important;
+}
+
+.dark-mode .MuiInputBase-root {
+  color: #4dabf5 !important;
+}
+
+.dark-mode .MuiOutlinedInput-root {
+  border-color: #4dabf5 !important;
+}
+
+.dark-mode .MuiOutlinedInput-notchedOutline {
+  border-color: #4dabf5 !important;
+}
+
+/* Hover effects */
+.dark-mode .MuiButton-root:hover {
+  background-color: rgba(77, 171, 245, 0.1) !important;
+}
+
+.dark-mode .MuiIconButton-root:hover {
+  background-color: rgba(77, 171, 245, 0.1) !important;
+}
+
+/* Links in dark mode */
+.dark-mode a {
+  color: #4dabf5 !important;
+  text-decoration: none;
+}
+
+.dark-mode a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar specific dark mode styles */
+.dark-mode .MuiDrawer-paper {
+  background-color: #1e1e1e !important;
+  border-right: 1px solid rgba(77, 171, 245, 0.12) !important;
+}
+
+.dark-mode .MuiListItem-root {
+  color: #4dabf5 !important;
+}
+
+.dark-mode .MuiListItemIcon-root {
+  color: #4dabf5 !important;
+}
+
+.dark-mode .MuiListItemText-root {
+  color: #4dabf5 !important;
+}
+
+.dark-mode .MuiDivider-root {
+  border-color: rgba(77, 171, 245, 0.12) !important;
+}
+
+/* Hover effects for sidebar items */
+.dark-mode .MuiListItem-root:hover {
+  background-color: rgba(77, 171, 245, 0.08) !important;
+}
+
+.dark-mode .MuiListItem-root.Mui-selected {
+  background-color: rgba(77, 171, 245, 0.16) !important;
+}
+
+.dark-mode .MuiListItem-root.Mui-selected:hover {
+  background-color: rgba(77, 171, 245, 0.24) !important;
+}
+
+/* Sidebar dark mode styles */
+.dark-mode.sidebar {
+  background-color: #1e1e1e !important;
+  border-right-color: rgba(77, 171, 245, 0.12) !important;
+}
+
+.dark-mode .logo {
+  color: #4dabf5 !important;
+}
+
+.dark-mode .MuiListItemButton-root {
+  color: #4dabf5 !important;
+}
+
+.dark-mode .MuiListItemIcon-root svg {
+  color: #4dabf5 !important;
+}
+
+.dark-mode .MuiAvatar-root {
+  border-color: #4dabf5 !important;
+}
+
+/* Message section dark mode styles */
+.dark-mode .message-section {
+  background-color: #1e1e1e !important;
+}
+
+.dark-mode .message-header {
+  background-color: #272727 !important;
+  border-bottom: 1px solid rgba(77, 171, 245, 0.12) !important;
+}
+
+.dark-mode .message-input {
+  background-color: #272727 !important;
+  border-top: 1px solid rgba(77, 171, 245, 0.12) !important;
+}
+
+.dark-mode .message-bubble {
+  background-color: rgba(77, 171, 245, 0.1) !important;
+}
+
+.dark-mode .message-bubble.sent {
+  background-color: rgba(77, 171, 245, 0.2) !important;
+}
+
+.dark-mode .message-time {
+  color: rgba(77, 171, 245, 0.7) !important;
+}
+
+/* Hover effects for sidebar and message items */
+.dark-mode .MuiListItemButton-root:hover {
+  background-color: rgba(77, 171, 245, 0.08) !important;
+}
+
+.dark-mode .MuiListItemButton-root.Mui-selected {
+  background-color: rgba(77, 171, 245, 0.16) !important;
+}
+
+/* Import Google Font for logo */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* Logo styles */
+.app-logo {
+  font-family: 'Dancing Script', cursive !important;
+  font-size: 2.2rem !important;
+  background: linear-gradient(45deg, #2196f3, #00bcd4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0px;
+  font-weight: 700 !important;
+}
+
+/* Dark mode logo */
+.dark-mode .app-logo {
+  background: linear-gradient(45deg, #4dabf5, #90caf9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styles for both light and dark modes */
+.MuiButton-contained {
+  color: white !important;
+}
+
+/* Dark mode button styles */
+.dark-mode .MuiButton-contained {
+  background-color: #4dabf5 !important;
+  color: #fff !important;
+}
+
+.dark-mode .MuiButton-contained:hover {
+  background-color: #2196f3 !important;
+}
+
+.dark-mode .MuiButton-contained:disabled {
+  background-color: rgba(77, 171, 245, 0.5) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Dark mode form styles */
+.dark-mode .MuiFormLabel-root,
+.dark-mode .MuiInputBase-root {
+  color: #4dabf5 !important;
+}
+
+.dark-mode .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(77, 171, 245, 0.5) !important;
+}
+
+.dark-mode .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #4dabf5 !important;
+}
+
+.dark-mode .MuiRadio-root {
+  color: #4dabf5 !important;
+}
+
+.dark-mode .MuiFormControlLabel-label {
+  color: #4dabf5 !important;
+}
